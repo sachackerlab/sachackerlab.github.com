@@ -1,0 +1,211 @@
+/* =============================================================================
+   Base
+   ========================================================================== */
+/* for fun */
+
+* {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+
+body {}
+
+@font-face {
+  font-family: 'ROCK';
+  src: url('fonts/ROCK.eot');
+  src: url('ROCK'), url('fonts/ROCK.ttf') format('truetype');
+}
+
+/* =============================================================================
+   Header
+   ========================================================================== */
+
+#banner {}
+
+/* Fixed Topbar Navigation */
+body {font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300; color:#8C8C8C; font-size: 16px; line-height: 24px;}
+body.top-navbar { padding-top: 60px; }
+body.admin-bar .navbar-fixed-top { top: 28px; }
+
+img {height:auto;}
+#mainimg {margin-left:30px;}
+
+
+h1, h2, h3, h4, h5, h6 {color:#4F4F4F;}
+h1 {line-height:60px;}
+.page-header {border-bottom:none; padding:72px 0; margin:0;}
+.page-header h1 {font-size:60px; color:#4F4F4F;}
+.page-header.home {margin-left:30px;}
+.carousel-caption h4 {}
+
+
+.navbar .brand {font-family: Rockwell, 'ROCK'; color:#FFF; font-size: 24px; margin:10px 0 10px 0;}
+.brand:hover, .brand:active {}
+
+
+/* NAV */
+#nav-main {}
+.navbar #menu-primary-navigation.nav > li > a {font-family: Rockwell, 'ROCK'; font-size:20px; color:#FFF; padding-top:20px; padding-bottom:25px;}
+.navbar #menu-primary-navigation.nav > li {}
+
+/* =============================================================================
+   Content
+   ========================================================================== */
+#wrap {}
+#content {}
+#main {}
+.carousel {padding-bottom:60px; border-bottom:1px solid #EEE;}
+
+/*.extraneous-non-semantic-markup {padding:30px 20px;}*/
+
+/* =============================================================================
+   Primary Content
+   ========================================================================== */
+
+#main { }
+#main.homepage {margin-top:55px;}
+#hero {
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+background-color: #31ACD5; 
+margin-bottom:30px;
+padding:100px 60px 85px 60px; 
+}
+#hero h1 {color:#FFF; font-size:60px; margin-bottom:42px;}
+#hero p {color:#FFF; font-size:26px;}
+h2.slogan {font-family: Rockwell, 'ROCK'; color:#ADADAD; text-align: center; margin:100px 0;}
+
+
+/* =============================================================================
+   Sidebar
+   ========================================================================== */
+
+#sidebar {}
+
+
+
+/* =============================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry p.byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* =============================================================================
+   Footer
+   ========================================================================== */
+
+#content-info {border-top:1px solid #EEE; padding-top:50px; margin-top:50px;}
+#content-info p {text-align: center; padding: 20px;}
+
+#content-info section.widget {text-align: left;}
+#content-info section.widget p {text-align: left;}
+#content-info section.widget-last {}
+#menu-social-links li {display:inline-block;font-size:18px; padding-right:40px;}
+#menu-social-links li a {color:#4F4F4F;}
+#menu-social-links li:nth-last-child(1) {padding-right:0;}
+#content-info #menu-social-links {margin-top:70px;}
+#nav_menu-2 .widget-inner {text-align: right;}
+
+/* BTNS */
+.btn-custom, .btn-custom:hover {padding:15px 22px; font-size:18px; padding:23px 60px; font-size:18px; background-color:#2DE16A; color:#FFF; text-shadow:none; border:none; background-image: -webkit-linear-gradient(top, #2DE16A, #2DE16A); background-image:-moz-linear-gradient(center top , #2DE16A, #2DE16A);}
+
+/* Forms */
+.quickformh {color:#ADADAD; font-size: 30px; line-height: 36px; margin-bottom:30px; margin-top:100px;}
+.quickform, .quickformh {text-align: center;}
+.quickform button.btn, .quickform input[type="submit"].btn {padding:23px 60px; margin-left:20px; font-size:18px; background-color:#2DE16A; color:#FFF; text-shadow:none; border:none; background-image: -webkit-linear-gradient(top, #2DE16A, #2DE16A); background-image:-moz-linear-gradient(center top , #2DE16A, #2DE16A);}
+.btn-success, .btn-success:hover {padding:15px 30px; font-size:18px; background-color:#2DE16A; background-image: -webkit-linear-gradient(top, #2DE16A, #2DE16A); color:#FFF; text-shadow:none; border:none; background-image:-moz-linear-gradient(center top , #2DE16A, #2DE16A); }
+
+.quickform textarea, .quickform input[type="text"], .quickform input[type="password"], .quickform input[type="datetime"], .quickform input[type="datetime-local"], .quickform input[type="date"], .quickform input[type="month"], .quickform input[type="time"], .quickform input[type="week"], .quickform input[type="number"], .quickform input[type="email"], .quickform input[type="url"], .quickform input[type="search"], .quickform input[type="tel"], .quickform input[type="color"], .quickform .uneditable-input {height:55px; font-size:24px; width:50%; padding-left:20px;}
+
+/* Logos */
+.logoCluster {text-align: center; margin-bottom:40px;}
+.logoCluster h2 {text-align:center; margin-bottom:30px; color:#ADADAD; font-size: 30px; line-height: 36px; margin-top:100px;}
+.logoCluster a, .logoCluster a:hover {text-decoration: none;}
+.logoCluster a > img {padding:40px;}
+
+
+/* Slab Text 
+.slabtexted .slabtext
+        {
+        display:-moz-inline-box;
+        display:inline-block
+        white-space:nowrap;
+        }
+.slabtextinactive .slabtext
+        {
+        display:inline;
+        white-space:normal;
+        font-size:1em !important;
+        letter-spacing:inherit !important;
+        word-spacing:inherit !important;
+        *letter-spacing:0 !important;
+        *word-spacing:0 !important;
+        }
+.slabtextdone .slabtext
+        {
+        display:block
+        }
+        */
+/* =============================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* =============================================================================
+   Media Queries
+   ========================================================================== */
+
+
+
+@media only screen and (min-width: 320px) {
+  .slogan { font-size:30px; line-height:35px;}
+  #nav-main.pull-right {float:none;}
+  #hero h1, #hero p {text-align:center;}
+  #hero .btn.pull-right {margin:50px 0 auto; float: none; display: block;}
+  .quickform textarea, .quickform input[type="text"], .quickform input[type="password"], .quickform input[type="datetime"], .quickform input[type="datetime-local"], .quickform input[type="date"], .quickform input[type="month"], .quickform input[type="time"], .quickform input[type="week"], .quickform input[type="number"], .quickform input[type="email"], .quickform input[type="url"], .quickform input[type="search"], .quickform input[type="tel"], .quickform input[type="color"], .quickform .uneditable-input {height:55px; font-size:24px; width:90%; padding-left:20px; margin-bottom:20px;}
+  .quickform button.btn, .quickform input[type="submit"].btn {padding:23px 60px; margin-left:0; width:100%; font-size:18px; background-color:#2DE16A; color:#FFF; text-shadow:none; border:none; background-image: -webkit-linear-gradient(top, #2DE16A, #2DE16A);}
+  .logoCluster a > img {padding:20px;}
+}
+@media only screen and (min-width: 480px) {
+}
+@media only screen and (min-width: 768px) {
+  #hero h1, #hero p {text-align:left;}
+  #hero .btn.pull-right {float:right; display: inline-block; margin:0;}
+  .quickform textarea, .quickform input[type="text"], .quickform input[type="password"], .quickform input[type="datetime"], .quickform input[type="datetime-local"], .quickform input[type="date"], .quickform input[type="month"], .quickform input[type="time"], .quickform input[type="week"], .quickform input[type="number"], .quickform input[type="email"], .quickform input[type="url"], .quickform input[type="search"], .quickform input[type="tel"], .quickform input[type="color"], .quickform .uneditable-input {height:55px; font-size:24px; width:50%; padding-left:20px; margin-bottom:0;}
+  .quickform button.btn, .quickform input[type="submit"].btn {padding:23px 60px; margin-left:20px; font-size:18px; background-color:#2DE16A; color:#FFF; text-shadow:none; border:none; background-image: -webkit-linear-gradient(top, #2DE16A, #2DE16A); width:auto;}
+  .logoCluster a > img {padding:40px;}
+}
+@media only screen and (min-width: 940px) {
+  .slogan {font-size:36px; line-height:42px;}
+  #nav-main.pull-right {float:right;}
+}
+@media only screen and (min-width: 1170px) {}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {}
+
+@media (max-width: 979px) {
+  /* Fix top padding when using the responsive grid with the fixed topbar */
+  body.top-navbar {
+    padding-top: 0;
+  }
+}
+/* LARGE DESKTOP SCREENS */
+@media (min-width: 1210px) {
+
+}
