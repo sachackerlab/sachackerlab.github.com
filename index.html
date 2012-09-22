@@ -29,11 +29,16 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
+    <!-- Scripting -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/affilimator.js"></script>
+		<script>Affilimator.ping({key:"2aa501c26b6423cc29c212dea8704b18bc755252"});</script>
+    <script type="text/javascript" src="assets/js/jquery.blockUI.js"></script>
 
     <style type="text/css"></style></head>
 
 
-  <body class="homepage" data-spy="scroll" data-target=".subnav" data-offset="50" cz-shortcut-listen="true">
+  <body data-spy="scroll" data-target=".subnav" data-offset="50" cz-shortcut-listen="true">
     <div cl_class="=#pageClass.value">
       
       <div id="fb-root"></div>
@@ -41,7 +46,7 @@
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;
 	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
 	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>   
       
@@ -88,6 +93,25 @@
 
 <!--end header-->
 
+<script type="text/javascript">
+  $(function() {
+	  $("#reg").submit(function() {
+		  if($("#email").val() == "") {
+			  alert("Please enter an email!");
+			  return false;
+		  }
+		  Affilimator.register({
+			   key:"2aa501c26b6423cc29c212dea8704b18bc755252", 
+			   email:$("#email").val(), 
+			   onFinish:function() {
+				  window.location = "thanks.html";
+		     }
+		  });
+		  return false;
+	  });
+  })
+</script>
+
 <input type="hidden" id="pageClass" value="homepage" />
 <!-- container -->
 <div class="container">
@@ -103,8 +127,8 @@
   <div class="row">
     <div class="span8 offset3">	
       <div class="newsletter-main">
-	<form>
-	  <input type="TEXT" class="span6" placeholder="Your Email" name="email">
+	<form id="reg">
+	  <input type="email" id="email" class="span6" placeholder="Your Email" name="email">
 	  <br>
 	  <button class="btn btn-success" type="submit">Join Us!</button>
 	</form>
