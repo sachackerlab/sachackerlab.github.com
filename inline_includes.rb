@@ -14,7 +14,11 @@ Dir.glob('*.html') do |item|
         out << line
         skipping = true
       elsif line.include? "<!--end header-->"
-        out << header
+        if item == "index.html" 
+          out << header.gsub( "$CLASS$", "homepage" )
+        else
+          out << header.gsub( "$CLASS$", "" )
+        end
         skipping = false
       elsif line.include? "<!--footer-->" then
         out << line
@@ -25,11 +29,6 @@ Dir.glob('*.html') do |item|
       end
       
       if not skipping
-	if item == 'index.html'
-          line = line.gsub( "$CLASS$", "homepage" )
-        else
-          line = line.gsub( "$CLASS$", "" )
-        end
         out << line
       end
       
