@@ -28,6 +28,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
+    <!-- Scripting -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/affilimator.js"></script>
+		<script>Affilimator.ping({key:"2aa501c26b6423cc29c212dea8704b18bc755252"});</script>
+    <script type="text/javascript" src="assets/js/jquery.blockUI.js"></script>
 
     <style type="text/css"></style></head>
 
@@ -40,12 +45,13 @@
 	var js, fjs = d.getElementsByTagName(s)[0];
 	if (d.getElementById(id)) return;
 	js = d.createElement(s); js.id = id;
-	js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
 	fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>   
       
       
       
+         
       <!-- Nav Bar -->
       
       <div class="navbar">
@@ -62,8 +68,13 @@
 	    <a class="brand pull-left" href="./index.html">#Hacker Lab</a>
 	    <div class="nav-collapse">
 	      <ul class="nav pull-right">
-		<li class="">
-		  <a href="community.html">Community</a>
+		<li class="dropdown">
+		    <a href="community.html" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+		       <ul class="dropdown-menu">
+		              <li><a href="community.html">Community</a></li>
+		   		      <li class="divider"></li>
+		              <li><a href="http://www.hackerlabjobs.com/" target="_blank">Jobs</a></li>
+		            </ul>
 		</li>
 		<li class="">
 		  <a href="education.html">Education</a>
@@ -82,6 +93,12 @@
 	  </div>
 	</div>
       </div>
+
+
+
+
+
+      
 
 
 
