@@ -38,7 +38,7 @@
     <style type="text/css"></style></head>
 
 
-  <body class="homepage" data-spy="scroll" data-target=".subnav" data-offset="50" cz-shortcut-listen="true">
+  <body data-spy="scroll" data-target=".subnav" data-offset="50" cz-shortcut-listen="true">
     <div cl_class="=#pageClass.value">
       
       <div id="fb-root"></div>
@@ -52,6 +52,7 @@
       
       
       
+         
       <!-- Nav Bar -->
       
       <div class="navbar">
@@ -68,8 +69,13 @@
 	    <a class="brand pull-left" href="./index.html">#Hacker Lab</a>
 	    <div class="nav-collapse">
 	      <ul class="nav pull-right">
-		<li class="">
-		  <a href="community.html">Community</a>
+		<li class="dropdown">
+		    <a href="community.html" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+		       <ul class="dropdown-menu">
+		              <li><a href="community.html">Community</a></li>
+		   		      <li class="divider"></li>
+		              <li><a href="http://www.hackerlabjobs.com/" target="_blank">Jobs</a></li>
+		            </ul>
 		</li>
 		<li class="">
 		  <a href="education.html">Education</a>
@@ -88,6 +94,12 @@
 	  </div>
 	</div>
       </div>
+
+
+
+
+
+      
 
 
 
