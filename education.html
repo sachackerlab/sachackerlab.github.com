@@ -129,37 +129,7 @@
   <hr>
 
   <div class="row">
-    <div class="span8">
-	   <h2><a target="_blank" href="http://www.meetup.com/HackerLab/events/80855902/">Hacker Lab Garage Sale "Fun"dRaiser!</a></h2>
-	<p><strong>
-	Sunday, September 23</strong></p>
-	
-	<p>
-	Clean out your closets, garages, and storage lockers! Join us for a day of community and “FUN”draising.</p>
-	  <hr>
-
-
-     <h2><a target="_blank" href="http://www.meetup.com/HackerLab/events/80472992/">Hacker Lab Grand Opening Gala</a></h2>
-        <p><strong>
-        Tuesday, October 16</strong></p>
-        <p>
-         Celebration time, come on! Let’s celebrate! Join us for a night of celebration for the official grand opening of Hacker Lab! WHOOT!</p>
-      <hr>
-
-	  <h2><a target="_blank" href="http://www.meetup.com/HackerLab/events/80472582/">Cereal Hack II</a></h2>
-        <p><strong>
-        Saturday, November 10</strong></p>
-        <p>
-        Yes! We are back! Join us for a weekend of coding, building, and entrepreneurship!</p>
-      <hr>  
-
-        <h2><a target="_blank" href="http://www.meetup.com/HackerLab/events/80856712/">Random Hacks of Kindness</a></h2>
-        <p><strong>
-        Saturday, December 1</strong></p>
-        <p>
-        Join us for the awesome Mini Hackathon via Random Hacks Of Kindness! Let's code to change the world!</p>
-      <hr>  
-
+    <div id="eventList" class="span8">
 
 	</div>
 
@@ -253,7 +223,32 @@
       interval: 3000
       });
       });
+
+      var MAX_EVENTS = 15;
+      var MAX_DESCRIPTION = 400;
+        function eventData(data) {
+            var eventCount = data.results.length;
+            if (eventCount > 20) {
+                eventCount = MAX_EVENTS;
+            }
+            for (i = 0; i < eventCount; i++) {
+                var event = data.results[i];
+                var eventDate = new Date(event.time);
+                var html = '<h2><a href="'+event.event_url+'" target="_blank">'+event.name+'</a></h2>';
+                html += '<p><strong>'+eventDate.toDateString()+'</strong></p>';
+                var desc = event.description;
+                if (desc.length > MAX_DESCRIPTION) {
+                    desc = desc.substr(0,MAX_DESCRIPTION) + '...';
+                }
+                html += '<p>'+desc+'</p>';
+                html += '<hr/>';
+
+                $('#eventList').append(html);
+            }
+        }
     </script>
+    <script src="http://api.meetup.com/2/events.json?status=upcoming&order=time&group_urlname=hackerlab&desc=false&offset=0&format=json&page=200&fields=&sig_id=12674&sig=f7c21bd44e918f9c2ef742cc1ddeddd03754776c&callback=eventData"></script>
+
 
 
 
