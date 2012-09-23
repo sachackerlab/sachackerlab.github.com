@@ -25,6 +25,11 @@ Dir.glob('*.html') do |item|
       end
       
       if not skipping
+	if item == 'index.html'
+          line = line.gsub( "$CLASS$", "homepage" )
+        else
+          line = line.gsub( "$CLASS$", "" )
+        end
         out << line
       end
       
