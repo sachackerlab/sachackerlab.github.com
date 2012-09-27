@@ -72,32 +72,31 @@
 	    
 	    <a class="brand pull-left" href="./index.html">#Hacker Lab</a>
 	    <div class="nav-collapse">
-	      <ul class="nav pull-right">
-		<li class="dropdown">
-		    <a href="community.html" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+	    <ul class="nav pull-right">
+			<li class="dropdown">
+		 		<a href="community.html" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
 		       <ul class="dropdown-menu">
-		              <li><a href="community.html">Community</a></li>
-		   		      <li class="divider"></li>
-		              <li><a href="http://www.hackerlabjobs.com/" target="_blank">Jobs</a></li>
-		            </ul>
-		</li>
-		<li class="">
-		  <a href="education.html">Education</a>
-		</li>
+		        	<li><a href="community.html">Community</a></li>
+		   			<li class="divider"></li>
+		        	<li><a href="http://www.hackerlabjobs.com/" target="_blank">Jobs</a></li>
+		        </ul>
+			</li>
+			<li class="">
+				<a href="events.html">Events</a>
+			</li>
 		
-		<li class="">
-		  <a href="campus.html">Campus</a>
-		</li>
-		
-		<li id="green" class="">
-		  <a id="green" href="join.html">Join Us!</a>
-		</li>
-	      </ul>
+			<li class="">
+				<a href="campus.html">Campus</a>
+			</li>
+			<li id="green" class="">
+				<a id="green" href="join.html">Join Us!</a>
+			</li>
+	  	</ul>
 	      
 	    </div>
-	  </div>
+	 </div>
 	</div>
-      </div>
+</div>
 
 
 
@@ -223,32 +222,7 @@
       interval: 3000
       });
       });
-
-      var MAX_EVENTS = 15;
-      var MAX_DESCRIPTION = 400;
-        function eventData(data) {
-            var eventCount = data.results.length;
-            if (eventCount > 20) {
-                eventCount = MAX_EVENTS;
-            }
-            for (i = 0; i < eventCount; i++) {
-                var event = data.results[i];
-                var eventDate = new Date(event.time);
-                var html = '<h2><a href="'+event.event_url+'" target="_blank">'+event.name+'</a></h2>';
-                html += '<p><strong>'+eventDate.toDateString()+'</strong></p>';
-                var desc = event.description;
-                if (desc.length > MAX_DESCRIPTION) {
-                    desc = desc.substr(0,MAX_DESCRIPTION) + '...';
-                }
-                html += '<p>'+desc+'</p>';
-                html += '<hr/>';
-
-                $('#eventList').append(html);
-            }
-        }
     </script>
-    <script src="http://api.meetup.com/2/events.json?status=upcoming&order=time&group_urlname=hackerlab&desc=false&offset=0&format=json&page=200&fields=&sig_id=12674&sig=f7c21bd44e918f9c2ef742cc1ddeddd03754776c&callback=eventData"></script>
-
 
 
 
