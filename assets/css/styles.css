@@ -98,7 +98,7 @@ h1#campus {
 h1#hero {
 	font-size: 100px;
 	color: #fff;
-	padding-top:70px;
+	padding-top:0px;
 	line-height: 100px;
 	text-align: center;
 	text-shadow: -1px -1px white, 1px 1px #333;
@@ -123,7 +123,7 @@ font-size: 30px;
 line-height: 36px;
 color: #fff;
 text-align: center;
-padding-top: 40px;
+padding-top: 10px;
 font-weight: normal;
 
 }
@@ -678,5 +678,12 @@ input[type="color"],
 	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
 	transition: border linear 0.2s, box-shadow linear 0.2s;
 }
+
+.ribbon{
+	float: right;
+	margin-top:-18px;
+	margin-right: 80px;
+}
+
 
 
