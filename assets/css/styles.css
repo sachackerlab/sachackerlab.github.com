@@ -679,7 +679,7 @@ input[type="color"],
 	transition: border linear 0.2s, box-shadow linear 0.2s;
 }
 
-.ribbon{
+#ribbon{
 	float: right;
 	margin-top:-18px;
 	margin-right: 80px;
